@@ -1,0 +1,195 @@
+:root {
+    --color-block1: lightblue;
+    --color-block2: lightyellow;
+    --color-block3: white;
+    --color-block4: lightyellow;
+    --color-block5: lightgreen;
+    --color-block6: lightblue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial;
+    font-size: clamp(9px, 1vw, 18px);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+}
+
+.block {
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    overflow: hidden;
+}
+
+.block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.image-4 {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+.block1 {
+    width: 100%;
+    background-color: var(--color-block1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: calc(100vh - 250px);
+}
+
+.block2, .block5 {
+    flex: 1;
+    min-height: 150px;
+    overflow: auto; 
+}
+
+.block2 {
+    background-color: var(--color-block2);
+}
+
+.block5 {
+    background-color: var(--color-block5);
+}
+
+.block3 {
+    width: 50%;
+    height: calc(100vh - 250px);
+    background-color: var(--color-block3);
+    text-align: justify;
+    padding: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.block3 p {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.block3 ol, .block3 ul {
+    margin-left: 40px;
+}
+
+.block4 {
+    width: 25%;
+    height: calc(100vh - 100px);
+    position: absolute;
+    right: 0;
+    top: 100px;
+    background-color: var(--color-block4);
+    text-align: center;
+    padding: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.block4 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.block4 a {
+    color: black;
+    text-decoration: none;
+}
+
+.block6 {
+    width: calc(100% - 25%);
+    background-color: var(--color-block6);
+    display: flex;
+    justify-content: space-between;
+    height: 150px;    
+}
+
+.block6 a {
+    color: grey;
+    text-decoration: none;
+}
+
+.block6 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.block6 ul li a {
+    display: flex;
+    align-items: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap');
+
+.styled-text-1 {
+    font-family: 'Tw Cen MT Condensed';
+    font-style: italic;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 4vw, 4em);
+    text-transform: uppercase;
+    overflow: hidden;
+    display: block;
+    max-width: 15ch;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.styled-text-2 {
+    font-family: 'Monotype Corsiva';
+    font-style: italic;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 4vw, 1em);
+    color: lightred;
+}
+
+.styled-text-3 {
+    font-family: 'Bookman Old Style';
+    font-style: italic;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 4vw, 1em);
+    color: lightred;
+}
+
+.styled-link {
+    font-family: 'Tw Cen MT Condensed';
+    font-style: italic;
+    font-weight: bold;
+    font-size: clamp(1rem, 4vw, 1.5em);
+    color: grey;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 21ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
