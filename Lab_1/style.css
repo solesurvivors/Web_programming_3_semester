@@ -1,0 +1,211 @@
+:root {
+    --color-block1: lightblue;
+    --color-block2: lightyellow;
+    --color-block3: white;
+    --color-block4: lightyellow;
+    --color-block5: lightgreen;
+    --color-block6: lightblue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(9px, 1vw, 18px);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.block {
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.image-4 {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+.block1 {
+    grid-column: 1 / 4;
+    background-color: var(--color-block1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: var(--color-block2);
+    min-height: 150px;
+    overflow: auto;
+}
+
+.block3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    background-color: var(--color-block3);
+    text-align: justify;
+    padding: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.block3 p {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.block3 ol, .block3 ul {
+    margin-left: 40px;
+}
+
+.block4 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+    background-color: var(--color-block4);
+    text-align: center;
+    padding: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-height: 100%;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block4 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.block4 a {
+    color: black;
+    text-decoration: none;
+}
+
+.block5 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    background-color: var(--color-block5);
+    min-height: 150px;
+    overflow: auto; 
+}
+
+.block6 {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    background-color: var(--color-block6);
+    display: flex;
+    justify-content: space-between;
+}
+
+.block6 a {
+    color: grey;
+    text-decoration: none;
+}
+
+.block6 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+
+.block6 ul li a {
+    display: inline-block;
+    max-width: 6ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap');
+
+.styled-text-1 {
+    font-family: 'Tw Cen MT Condensed';
+    font-style: italic;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 4vw, 4em);
+    text-transform: uppercase;
+    overflow: hidden;
+    display: block;
+    max-width: 15ch;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.styled-text-2 {
+    font-family: 'Monotype Corsiva';
+    font-style: italic;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 4vw, 1em);
+    color: lightred;
+}
+
+.styled-text-3 {
+    font-family: 'Bookman Old Style';
+    font-style: italic;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 4vw, 1em);
+    color: lightred;
+}
+
+.styled-link {
+    font-family: 'Tw Cen MT Condensed';
+    font-style: italic;
+    font-weight: bold;
+    font-size: clamp(1rem, 4vw, 1.5em);
+    color: grey;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 21ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+    
+    .block2, .block5 {
+        min-height: auto;
+    }
+}
